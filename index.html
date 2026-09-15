@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Math in the Modern World | Juanito Rallos</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  background:#f7f8ff;color:#20223a;line-height:1.6;
+}
+header{
+  min-height:92vh;padding:25px 7%;display:flex;align-items:center;
+  color:white;position:relative;overflow:hidden;
+  background:linear-gradient(135deg,#5b2cff,#ff3d81 48%,#ffb300);
+}
+header:before,header:after{
+  content:"";position:absolute;border-radius:50%;opacity:.18;background:#fff;
+}
+header:before{width:380px;height:380px;right:-100px;top:-100px}
+header:after{width:250px;height:250px;left:-90px;bottom:-80px}
+.nav{
+  position:absolute;top:0;left:0;width:100%;padding:18px 7%;
+  display:flex;justify-content:space-between;align-items:center;z-index:3;
+}
+.logo{font-weight:900;font-size:20px;letter-spacing:.5px}
+.nav a{color:white;text-decoration:none;margin-left:20px;font-weight:700;font-size:14px}
+.hero{position:relative;z-index:2;max-width:800px}
+.badge{display:inline-block;background:#ffffff2b;border:1px solid #ffffff55;padding:8px 15px;border-radius:30px;margin-bottom:18px}
+h1{font-size:clamp(45px,8vw,86px);line-height:.98;margin-bottom:20px}
+.hero p{font-size:20px;max-width:650px;color:#fff}
+.developer{margin-top:28px;font-weight:bold;font-size:16px}
+.symbols{position:absolute;right:10%;bottom:13%;font-size:100px;font-weight:900;opacity:.18;transform:rotate(-8deg)}
+section{padding:75px 7%}
+.section-title{text-align:center;margin-bottom:45px}
+.section-title h2{font-size:38px;color:#3b237d}
+.section-title p{color:#696b82;margin-top:8px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px}
+.card{
+  background:white;border-radius:24px;padding:28px;box-shadow:0 12px 35px #25204b12;
+  border-top:6px solid var(--c);transition:.25s;position:relative;overflow:hidden;
+}
+.card:hover{transform:translateY(-7px);box-shadow:0 18px 40px #25204b1c}
+.card .num{font-size:14px;font-weight:900;color:var(--c)}
+.card h3{font-size:23px;margin:8px 0 10px}
+.card p{color:#65677a}
+.card a{display:inline-block;margin-top:17px;text-decoration:none;font-weight:800;color:var(--c)}
+.topic{scroll-margin-top:30px}
+.topic-box{
+  max-width:1000px;margin:auto;background:white;border-radius:30px;padding:35px;
+  box-shadow:0 15px 45px #25204b12;border-left:9px solid var(--c);
+}
+.topic-head{display:flex;gap:18px;align-items:center;margin-bottom:18px}
+.icon{width:58px;height:58px;border-radius:18px;display:grid;place-items:center;color:white;background:var(--c);font-size:28px;font-weight:900}
+.topic-box h2{font-size:32px;color:#29234d}
+.topic-box p{margin:10px 0;color:#555970}
+.example{
+  background:var(--bg);padding:20px;border-radius:18px;margin-top:18px;
+}
+.example strong{color:var(--c)}
+.formula{
+  font-size:23px;font-weight:900;background:#fff;padding:15px;border-radius:14px;
+  margin-top:12px;display:inline-block;color:#30255d;
+}
+.pills{display:flex;flex-wrap:wrap;gap:10px;margin-top:15px}
+.pill{padding:8px 13px;border-radius:20px;background:#fff;font-weight:700;font-size:14px}
+.venn{
+  display:flex;justify-content:center;align-items:center;height:210px;margin:15px 0;
+}
+.circle{
+  width:170px;height:170px;border-radius:50%;display:grid;place-items:center;
+  font-weight:900;font-size:18px;
+}
+.a{background:#ff4f8b99;border:4px solid #ff4f8b;transform:translateX(30px)}
+.b{background:#5b6cff99;border:4px solid #5b6cff;transform:translateX(-30px)}
+.reason-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:18px}
+.reason{padding:22px;border-radius:18px;color:white}
+.ded{background:linear-gradient(135deg,#5b2cff,#7a62ff)}
+.ind{background:linear-gradient(135deg,#ff3d81,#ff8b3d)}
+footer{
+  text-align:center;padding:35px 7%;color:white;background:#211747;
+}
+footer strong{color:#ffb300}
+@media(max-width:700px){
+ .nav{align-items:flex-start}.nav a{margin-left:9px;font-size:11px}
+ .symbols{font-size:65px;right:4%;bottom:8%}
+ section{padding:55px 5%}
+ .topic-box{padding:24px}
+ .reason-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<header id="home">
+  <nav class="nav">
+    <div class="logo">∑ MATH WORLD</div>
+    <div>
+      <a href="#home">HOME</a>
+      <a href="#topics">TOPICS</a>
+      <a href="#about">ABOUT</a>
+    </div>
+  </nav>
+  <div class="hero">
+    <span class="badge">📘 MATH IN THE MODERN WORLD</span>
+    <h1>Think.<br>Calculate.<br>Discover.</h1>
+    <p>A colorful and simple guide to mathematical language, expressions, sets, Venn diagrams, and reasoning.</p>
+    <div class="developer">👨‍💻 Developed by Juanito Rallos</div>
+  </div>
+  <div class="symbols">∑ ∞ π ∈ √</div>
+</header>
+
+<section id="topics">
+  <div class="section-title">
+    <h2>Explore Our Topics</h2>
+    <p>Click a topic to learn the basic idea and see an easy example.</p>
+  </div>
+  <div class="grid">
+    <div class="card" style="--c:#5b2cff"><div class="num">01</div><h3>Mathematical Language & Symbols</h3><p>Learn the symbols and words used to communicate mathematical ideas.</p><a href="#language">Explore →</a></div>
+    <div class="card" style="--c:#ff3d81"><div class="num">02</div><h3>Mathematical Expressions</h3><p>Understand numbers, variables, operations, and expressions.</p><a href="#expressions">Explore →</a></div>
+    <div class="card" style="--c:#00a896"><div class="num">03</div><h3>Sets</h3><p>Learn how objects or elements can be grouped together.</p><a href="#sets">Explore →</a></div>
+    <div class="card" style="--c:#ff8b00"><div class="num">04</div><h3>Set-Builder Notation</h3><p>Describe a set using a rule or condition.</p><a href="#builder">Explore →</a></div>
+    <div class="card" style="--c:#00a8e8"><div class="num">05</div><h3>Different Types of Sets</h3><p>Discover common classifications of mathematical sets.</p><a href="#types">Explore →</a></div>
+    <div class="card" style="--c:#9b36ff"><div class="num">06</div><h3>Venn Diagram</h3><p>Use circles to show relationships between sets.</p><a href="#venn">Explore →</a></div>
+    <div class="card" style="--c:#e63946"><div class="num">07</div><h3>Deductive & Inductive Reasoning</h3><p>Compare two important ways of reaching conclusions.</p><a href="#reasoning">Explore →</a></div>
+  </div>
+</section>
+
+<section class="topic" id="language" style="--c:#5b2cff;--bg:#eee9ff">
+<div class="topic-box"><div class="topic-head"><div class="icon">∑</div><h2>Mathematical Language and Symbols</h2></div>
+<p>Mathematical language uses symbols, numbers, and special words to communicate ideas clearly and briefly.</p>
+<div class="pills"><span class="pill">+ Addition</span><span class="pill">− Subtraction</span><span class="pill">× Multiplication</span><span class="pill">÷ Division</span><span class="pill">= Equal</span><span class="pill">≠ Not equal</span><span class="pill">&gt; Greater than</span><span class="pill">&lt; Less than</span></div>
+<div class="example"><strong>Example:</strong> “Five is greater than three” can be written as:
+<div class="formula">5 &gt; 3</div></div></div>
+</section>
+
+<section class="topic" id="expressions" style="--c:#ff3d81;--bg:#ffe8f1">
+<div class="topic-box"><div class="topic-head"><div class="icon">x²</div><h2>Mathematical Expression</h2></div>
+<p>A mathematical expression is a combination of numbers, variables, and mathematical operations. It does not need an equal sign.</p>
+<div class="example"><strong>Example:</strong>
+<div class="formula">3x + 5</div>
+<p>Here, <b>3</b> is the coefficient, <b>x</b> is the variable, and <b>5</b> is the constant.</p></div></div>
+</section>
+
+<section class="topic" id="sets" style="--c:#00a896;--bg:#e2faf6">
+<div class="topic-box"><div class="topic-head"><div class="icon">{ }</div><h2>Set</h2></div>
+<p>A set is a well-defined collection of objects or elements. Elements are commonly written inside braces { }.</p>
+<div class="example"><strong>Example:</strong> A set of vowels:
+<div class="formula">A = {a, e, i, o, u}</div></div></div>
+</section>
+
+<section class="topic" id="builder" style="--c:#ff8b00;--bg:#fff1dc">
+<div class="topic-box"><div class="topic-head"><div class="icon">|</div><h2>Set-Builder Notation</h2></div>
+<p>Set-builder notation describes the elements of a set by stating a condition that they must satisfy.</p>
+<div class="example"><strong>Example:</strong> The set of positive even numbers less than 10:
+<div class="formula">A = {x | x is even, x &lt; 10}</div>
+<p>The symbol <b>|</b> can be read as “such that.”</p></div></div>
+</section>
+
+<section class="topic" id="types" style="--c:#00a8e8;--bg:#e3f7ff">
+<div class="topic-box"><div class="topic-head"><div class="icon">∞</div><h2>Different Types of Sets</h2></div>
+<p>Sets can be classified based on the number and relationship of their elements.</p>
+<div class="grid" style="margin-top:20px">
+  <div class="example"><strong>Empty Set</strong><p>A set with no elements.</p><div class="formula">∅</div></div>
+  <div class="example"><strong>Singleton Set</strong><p>A set with exactly one element.</p><div class="formula">{7}</div></div>
+  <div class="example"><strong>Finite Set</strong><p>A set with a limited number of elements.</p><div class="formula">{1,2,3}</div></div>
+  <div class="example"><strong>Infinite Set</strong><p>A set that continues without end.</p><div class="formula">{1,2,3,...}</div></div>
+</div></div>
+</section>
+
+<section class="topic" id="venn" style="--c:#9b36ff;--bg:#f0e7ff">
+<div class="topic-box"><div class="topic-head"><div class="icon">◯</div><h2>Venn Diagram</h2></div>
+<p>A Venn diagram uses circles to visually show the relationship between sets. The overlapping part represents elements common to both sets.</p>
+<div class="venn"><div class="circle a">SET A</div><div class="circle b">SET B</div></div>
+<div class="example"><strong>Example:</strong> If A = {1,2,3} and B = {3,4,5}, then the common element is <b>3</b>. This is called the intersection: <b>A ∩ B = {3}</b>.</div></div>
+</section>
+
+<section class="topic" id="reasoning" style="--c:#e63946;--bg:#ffe7e9">
+<div class="topic-box"><div class="topic-head"><div class="icon">?</div><h2>Reasoning: Deductive and Inductive</h2></div>
+<p>Reasoning is the process of using information and logic to reach a conclusion.</p>
+<div class="reason-grid">
+ <div class="reason ded"><h3>🔷 Deductive Reasoning</h3><p>Starts with a general rule and applies it to a specific case.</p><p><b>Example:</b> All humans need oxygen. Juanito is a human. Therefore, Juanito needs oxygen.</p></div>
+ <div class="reason ind"><h3>🔶 Inductive Reasoning</h3><p>Starts with observations or specific examples and forms a general conclusion.</p><p><b>Example:</b> The sun rose every morning in the observations. Therefore, we expect the sun to rise tomorrow.</p></div>
+</div>
+<div class="example"><strong>Easy way to remember:</strong> Deductive = <b>General → Specific</b> &nbsp; | &nbsp; Inductive = <b>Specific → General</b></div>
+</div>
+</section>
+
+<section id="about" style="background:#fff4d8">
+<div class="section-title"><h2>Why Mathematics Matters</h2><p>Mathematics helps us communicate ideas, solve problems, recognize patterns, and make logical decisions in everyday life.</p></div>
+<div class="grid">
+<div class="card" style="--c:#5b2cff"><h3>🧩 Problem Solving</h3><p>Math teaches us how to break difficult problems into smaller and manageable parts.</p></div>
+<div class="card" style="--c:#ff3d81"><h3>🧠 Critical Thinking</h3><p>Mathematical reasoning helps us evaluate information and make logical conclusions.</p></div>
+<div class="card" style="--c:#00a896"><h3>🌎 Real Life</h3><p>We use mathematics in money, technology, measurements, schedules, and many other activities.</p></div>
+</div>
+</section>
+
+<footer>
+  <p>📚 <strong>Math in the Modern World</strong></p>
+  <p>Created for learning and presentation</p>
+  <p>👨‍💻 Developed by <strong>Juanito Rallos</strong></p>
+</footer>
+</body>
+</html>
